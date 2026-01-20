@@ -3,7 +3,7 @@ import { clientService } from './clientservice';
 import  orderService  from './orderService';
 import { orderDetailService } from './orderDetailsService';
 import { categoryService } from './categoryService';
-import  healthService  from './healthService';
+import  healthService  from './backendHealthService';
 
 export const optimizedServices = {
   products: productService,

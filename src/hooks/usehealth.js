@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import  healthService  from '../services/api/healthService';
+import  healthService  from '../services/api/backendHealthService';
 
 export const useHealth = (interval = 30000) => {
   const [health, setHealth] = useState(null);

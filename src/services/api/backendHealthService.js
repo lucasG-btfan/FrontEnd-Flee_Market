@@ -1,6 +1,5 @@
 import axios from 'axios';
 
-// Crear instancia separada sin el prefijo /api/v1
 const baseURL = import.meta.env.VITE_API_URL?.replace('/api/v1', '') || 
                 'https://comercio-digital.onrender.com';
 
