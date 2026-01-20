@@ -14,7 +14,7 @@ import OrderCreator from './components/orders/OrderCreator';
 import OrderDetails from './screen/OrderDetails'; 
 import ProtectedRoute from './components/ProtectedRoute';
 import Header from './components/common/Header';
-import { useConnection } from './hooks/useConnection';
+import { useConnection } from './hooks/useconnection';
 import { useAuth } from './hooks/useAuth';
 import { CartProvider } from './context/CartContext';
 import './App.css';
