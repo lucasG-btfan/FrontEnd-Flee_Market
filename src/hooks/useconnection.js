@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
-import healthService from '../services/api/healthService';
+import healthService from '../services/api/healthservice.js';
 
 export const useConnection = () => {
   const [isConnected, setIsConnected] = useState(false);
