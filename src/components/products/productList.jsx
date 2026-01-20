@@ -1,7 +1,7 @@
 import React from 'react';
 import ProductCard from './productCard';
 import LoadingSpinner from '../common/LoadingSpinner';
-import './ProductList.css';
+import './productList.css';
 
 const ProductList = ({ products, loading, error, onProductClick, addToCart, layout = 'grid' }) => {
   console.log("🔄 ProductList recibió:", products, "Layout:", layout);

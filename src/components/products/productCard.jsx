@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { FaShoppingCart, FaEye } from 'react-icons/fa';
 import RatingStars from '../common/RatingStars';
 import reviewService from '../../services/api/reviewService';
-import './ProductCard.css';
+import './productCard.css';
 
 const ProductCard = ({ product, onClick, onAddToCart, layout = 'grid' }) => {
   const [ratingInfo, setRatingInfo] = useState({
