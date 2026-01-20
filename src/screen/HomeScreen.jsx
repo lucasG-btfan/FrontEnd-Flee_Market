@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom'; 
-import { useApi } from '../hooks/useApi';
+import { useApi } from '../hooks/useapi';
 import { productService } from '../services/api/productService';
 import ProductList from '../components/products/productList';
 import '../styles/HomeScreen.css';
