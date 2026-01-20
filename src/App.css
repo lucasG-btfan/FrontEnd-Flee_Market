@@ -1,0 +1,23 @@
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.health-warning {
+  background: #fef3c7;
+  border: 1px solid #f59e0b;
+  color: #92400e;
+  padding: 1rem;
+  border-radius: 6px;
+  margin: 1rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 1rem;
+  }
+}

@@ -1,0 +1,55 @@
+.connection-status {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: white;
+  border-radius: 6px;
+  border-left: 4px solid #6b7280;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin: 0.5rem 0;
+}
+
+.status-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.status-content {
+  flex: 1;
+}
+
+.status-message {
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.25rem;
+}
+
+.status-description {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-bottom: 0.5rem;
+}
+
+.last-checked {
+  font-size: 0.75rem;
+  color: #9ca3af;
+  font-style: italic;
+}
+
+/* Estados específicos */
+.connection-status.healthy {
+  border-left-color: #10b981;
+}
+
+.connection-status.degraded {
+  border-left-color: #f59e0b;
+}
+
+.connection-status.error {
+  border-left-color: #ef4444;
+}
+
+.connection-status.offline {
+  border-left-color: #6b7280;
+}

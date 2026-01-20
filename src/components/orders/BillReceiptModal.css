@@ -1,0 +1,280 @@
+/* Prefijo específico para evitar conflictos */
+.br-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  padding: 20px;
+  animation: br-fadeIn 0.3s ease-out;
+}
+
+.br-modal-container {
+  background-color: white;
+  border-radius: 12px;
+  padding: 30px;
+  max-width: 600px;
+  width: 100%;
+  max-height: 85vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  animation: br-slideUp 0.4s ease-out;
+  position: relative;
+}
+
+.br-modal-header {
+  text-align: center;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.br-modal-header h2 {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.br-modal-subtitle {
+  color: #7f8c8d;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.br-content {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 25px;
+  border: 1px solid #e9ecef;
+}
+
+.br-content-section {
+  margin-bottom: 20px;
+}
+
+.br-content-section:last-child {
+  margin-bottom: 0;
+}
+
+.br-content-section h3 {
+  color: #3498db;
+  font-size: 18px;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.br-info-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  padding: 5px 0;
+}
+
+.br-info-row:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.br-info-label {
+  font-weight: 600;
+  color: #555;
+}
+
+.br-info-value {
+  color: #2c3e50;
+  text-align: right;
+}
+
+.br-items-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.br-items-table th {
+  background-color: #3498db;
+  color: white;
+  padding: 10px;
+  text-align: left;
+  font-weight: 600;
+}
+
+.br-items-table td {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.br-items-table tr:hover {
+  background-color: #f5f5f5;
+}
+
+.br-total-section {
+  background-color: #2c3e50;
+  color: white;
+  padding: 15px;
+  border-radius: 6px;
+  margin-top: 20px;
+}
+
+.br-total-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.br-modal-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.br-btn {
+  padding: 12px 24px;
+  border-radius: 6px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 140px;
+}
+
+.br-btn-close {
+  background-color: #3498db;
+  color: white;
+}
+
+.br-btn-close:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+}
+
+.br-btn-print {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.br-btn-print:hover {
+  background-color: #27ae60;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(46, 204, 113, 0.3);
+}
+
+.br-status-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.br-status-pending {
+  background-color: #f39c12;
+  color: white;
+}
+
+.br-status-completed {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.br-status-cancelled {
+  background-color: #e74c3c;
+  color: white;
+}
+
+/* Animaciones */
+@keyframes br-fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes br-slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .br-modal-container {
+    padding: 20px;
+    max-width: 95%;
+  }
+  
+  .br-modal-actions {
+    flex-direction: column;
+  }
+  
+  .br-btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .br-info-row {
+    flex-direction: column;
+  }
+  
+  .br-info-value {
+    text-align: left;
+    margin-top: 5px;
+  }
+}
+
+/* Estilo para impresión */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  
+  .br-modal-overlay,
+  .br-modal-overlay * {
+    visibility: visible;
+  }
+  
+  .br-modal-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    padding: 0;
+  }
+  
+  .br-modal-container {
+    box-shadow: none;
+    max-width: 100%;
+    max-height: none;
+    padding: 20px;
+    margin: 0;
+  }
+  
+  .br-modal-actions {
+    display: none;
+  }
+  
+  .br-btn {
+    display: none;
+  }
+  
+  .br-content {
+    border: 1px solid #000;
+  }
+}

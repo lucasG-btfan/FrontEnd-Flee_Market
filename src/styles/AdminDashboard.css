@@ -1,0 +1,234 @@
+.admin-dashboard {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.admin-dashboard h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Stats Grid */
+.admin-dashboard .stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.admin-dashboard .stat-card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.admin-dashboard .stat-icon {
+  font-size: 2rem;
+  color: #6e8efb;
+}
+
+.admin-dashboard .stat-content h3 {
+  font-size: 1rem;
+  margin: 0;
+  color: #666;
+}
+
+.admin-dashboard .stat-value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.admin-dashboard .stat-value.status {
+  text-transform: capitalize;
+  font-size: 1rem;
+}
+
+/* Admin Tabs */
+.admin-dashboard .admin-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.admin-dashboard .tab-button {
+  padding: 12px 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #666;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.admin-dashboard .tab-button:hover {
+  color: #333;
+}
+
+.admin-dashboard .tab-button.active {
+  color: #6e8efb;
+  border-bottom-color: #6e8efb;
+}
+
+/* Tab Content */
+.admin-dashboard .tab-content {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.admin-dashboard .tab-content h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+/* Products Table */
+.admin-dashboard .products-table {
+  width: 100%;
+  margin-top: 20px;
+  overflow-x: auto;
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.admin-dashboard .products-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin-dashboard .products-table thead {
+  background: #f8f9fa;
+}
+
+.admin-dashboard .products-table th {
+  padding: 12px 15px;
+  text-align: left;
+  font-weight: 600;
+  color: #555;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.admin-dashboard .products-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.admin-dashboard .products-table tr:hover {
+  background: #f8f9fa;
+}
+
+/* Stock Status */
+.admin-dashboard .stock {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.admin-dashboard .stock.low {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.admin-dashboard .stock.medium {
+  background: #cfe2ff;
+  color: #084298;
+}
+
+.admin-dashboard .stock.high {
+  background: #d4edda;
+  color: #155724;
+}
+
+.admin-dashboard .stock.critical {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+/* Product Actions */
+.admin-dashboard .product-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.admin-dashboard .btn-edit,
+.admin-dashboard .btn-delete {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.2s ease;
+}
+
+.admin-dashboard .btn-edit {
+  background: #6e8efb;
+  color: white;
+}
+
+.admin-dashboard .btn-edit:hover {
+  background: #5a7df4;
+}
+
+.admin-dashboard .btn-delete {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.admin-dashboard .btn-delete:hover {
+  background: #f1c1c6;
+}
+
+/* Loading Spinner */
+.admin-dashboard .loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Empty State */
+.admin-dashboard .empty-state {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .admin-dashboard .products-table table {
+    font-size: 0.85rem;
+  }
+
+  .admin-dashboard .products-table th,
+  .admin-dashboard .products-table td {
+    padding: 8px 10px;
+  }
+
+  .admin-dashboard .product-actions {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .admin-dashboard .btn-edit,
+  .admin-dashboard .btn-delete {
+    width: 100%;
+    text-align: center;
+  }
+}
