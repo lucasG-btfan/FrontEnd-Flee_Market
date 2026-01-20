@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useApi } from '../hooks/useApi';
+import { useApi } from '../hooks/useapi';
 import { productService } from '../services/api/productService';
 import ProductList from '../components/products/productList';
 import LoadingSpinner from '../components/common/LoadingSpinner';
