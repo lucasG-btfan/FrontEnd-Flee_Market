@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { FaSave, FaTimes, FaImage, FaTag, FaDollarSign, FaBox, FaLayerGroup, FaInfoCircle, FaSpinner } from 'react-icons/fa';
 import productService from '../../../services/api/productService';
-import categoryService from '../../../services/api/categoryService';
+import categoryService from '../../../services/api/FrontCategoryService';
 import './ProductForm.css';
 
 const ProductForm = ({ onProductCreated, onClose, productToEdit }) => {
